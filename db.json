@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "ANAR",
+      "image":null,
+      "price":60,
+      "category": "Juices"
+    },
+    {
+      "id": 2,
+      "name": "MANGO",
+      "image":null,
+      "price":50,
+      "category": "Juices"
+    },
+    {
+      "id": 3,
+      "name": "APPLE",
+      "image":null,
+      "price":40,
+      "category": "Juices"
+    },
+    {
+      "id": 4,
+      "name": "PINE APPLE",
+      "image":null,
+      "price":70,
+      "category": "Juices"
+    },
+    {
+      "id": 1,
+      "name": "ANAR",
+      "image":null,
+      "price":60,
+      "category": "rolls"
+    },
+    {
+      "id": 2,
+      "name": "MANGO",
+      "image":null,
+      "price":50,
+      "category": "rolls"
+    },
+    {
+      "id": 3,
+      "name": "APPLE",
+      "image":null,
+      "price":40,
+      "category": "rolls"
+    }
+  ],
+
+
+
+
+
+  "category": [
+    {
+      "id": "1",
+      "name": "Juices"
+    },
+    {
+      "id": "2",
+      "name": "rolls"
+    },
+    {
+      "id": "3",
+      "name": "Snacks"
+    },
+    {
+      "id": "4",
+      "name": "Burgurs"
+    },
+    {
+      "id": "5",
+      "name": "Sandwhich"
+    }
+  ]
+}
