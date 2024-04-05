@@ -93,6 +93,7 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
         this.chatbotDiv=!this.chatbotDiv
     }
 
+    
 
     scrollIntoView() {
       if (this.chatscroll && this.chatscroll.nativeElement) {
@@ -104,7 +105,7 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
           console.log(selectedOptionRect, "chatbotdiv")
           console.log(containerRect, "container")
           if (selectedOptionRect.bottom>= containerRect.bottom) {
-            container.scrollTop += selectedOptionRect.height - containerRect.height;
+            container.scrollTop += (selectedOptionRect.height - containerRect.height);
           } //else if (selectedOptionRect.top <= containerRect.top) {
           //   container.scrollTop -= containerRect.top - (selectedOptionRect.top-selectedOptionRect.height+2);
           // }

@@ -15,6 +15,7 @@
                     <svg style="width:20%" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
                     </svg>
+                    <span class="fz-17 mx-3">Cart</span>
                 </span>
             </div>
             <div class="d-flex justify-content-end">
@@ -133,18 +134,67 @@
         </div>
 
         <!-- Cart page -->
-        <div class="chatbot_textarea shadow-sm" *ngIf="chatbotDiv===false">
-
+        <div class="chatbot_textarea shadow-sm p-3" *ngIf="chatbotDiv===false">
+            <div class="d-flex align-items-center pt-4">
+                <span class="grandTotal fz-20 fw-bolder">My Cart</span>
+            </div>
+            <div class="pb-4 ">
+                <div class="d-flex flex-column shadow-sm p-2 mt-2  cartBox">
+                    <div class="col-12 row mx-0 rounded" style="background-color: white; height: 100px;">
+                        <div class="col-9 px-0 d-flex flex-row">
+                            <div class="col-5 p-2 d-flex justify-content-center " style="position: relative; background-color: #F2F2F2; border-radius: 10px;">
+                                    <img src="../../assets/foodimages/biriyani.webp" alt="">
+                                    <div class="countInCart d-flex justify-content-center align-items-center ">
+                                            <span class="mx-2 ">1</span>                                       
+                                    </div>                   
+                            </div>
+                            <div class="col-7 d-flex flex-column ms-2 " style="word-wrap: break-word;">
+                                <span class="cartProductName ">Tofu Fresh Pcs hggggjhgjghjhgjhgjhgjhgj</span>
+                                <div class="d-flex flex-row align-items-end ">
+                                    <span style="font-size: 14px; font-weight: bold;" class="">AED 5.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 px-2 d-flex flex-column justify-content-between align-items-end py-1 ">
+                                <div class="d-flex flex-row justify-content-end align-items-center ">
+                                    <!-- <span class="delete rounded shadow-sm d-flex justify-content-center align-items-center cursor text-center">
+                                        <i class="bi bi-trash3-fill"></i>
+                                    </span> -->
+                                    <span class="mx-2 delete rounded shadow-sm d-flex justify-content-center align-items-center cursor text-center">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </span>
+                                    <span class="delete rounded shadow-sm d-flex justify-content-center align-items-center cursor text-center">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </div>
 
         <!-- menubtn trigger -->
-        <div class="menubtn shadow d-flex flex-column p-2" data-bs-toggle="offcanvas" (click)="catagorycall()"
+        <!-- <div  *ngIf="chatbotDiv===true" class="menubtn shadow d-flex flex-column p-2" data-bs-toggle="offcanvas" (click)="catagorycall()"
         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-        </svg>
+        </svg> 
+        </div> -->
+
+        <!-- Menubutton and searcbar -->
+        <div class="d-flex flex-row p-2 search" style="border-top: 1px solid #F2F2F2; width: 100%;">
+            <button data-bs-toggle="offcanvas" (click)="catagorycall()" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="me-1 closeBtn py-1 px-2 d-flex align-items-center justify-content-center ">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="searchBox py-1 px-2 d-flex justify-content-between ">
+                <input placeholder="search" type="text" class="searchInput mx-1  ng-untouched ng-pristine ng-valid">
+                <span style="width: 40px;text-align: center;border-left: 1px solid grey">
+                    <i class="bi bi-search"></i>
+                </span>
+            </div>
         </div>
+
     </div>
 </div>

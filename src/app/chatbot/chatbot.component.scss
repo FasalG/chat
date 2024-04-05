@@ -50,7 +50,7 @@
     border-radius: 50%;
 }
 .menubtn{
-    position: fixed;
+    position: absolute;
     bottom: 50px; 
     right: 15px;
     width: 50px;
@@ -84,3 +84,49 @@
     bottom: -11px;
     background-color: white
 }
+
+
+// Cart
+
+.countInCart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;   
+    text-align: center;
+}
+.delete{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+.search{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+.closeBtn{
+    border: 2px solid #F2F2F2;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    width: 15%;
+}
+.searchBox {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.searchInput{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 16px; 
+}   
