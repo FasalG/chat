@@ -1,30 +1,28 @@
 .main{
     width: 384px;
     position:relative;
+    height: 100vh;
+    background-color: #cac7d1;
     
 }
 
 @media (min-width:300px) and (max-width:576px){
     .main{
-        width: 100%;
-        
-    }
-    
+        width: 100%;       
+    }    
 }
 
 .chatbot_header{
     background-color: #fff;
     line-height: 40px;
-    height: 10vh;
- 
+    height: 10%; 
 }
 
-.chatbot_textarea{
-    background-color: #cac7d1;
+.chatbot_textarea{    
     overflow: auto;
     scroll-behavior: smooth;
-    height: 90vh;
     scrollbar-width: none;
+    height: 84%;
 } 
 .conversation{
     font-size: 14px;
@@ -44,21 +42,18 @@
     height: 100%;
 }
 .cartbtn{
-    background-color: orange;
+     position: relative;
     width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    height: 50px;    
 }
-.menubtn{
-    position: absolute;
-    bottom: 50px; 
-    right: 15px;
-    width: 50px;
-    height: 50px;
+.cartbtn-count{
+    position:absolute;
+    top: -6px;
+    right: -6px;
+    width: 25px;
+    height: 25px;
     background-color: orange;
-    color: black;
-    border-radius: 50%;   
-    text-align: center;
+    border-radius: 50%;
 }
 .eachproductcard{
     background-color: beige;
@@ -82,7 +77,8 @@
     height: 30px;
     position: absolute;
     bottom: -11px;
-    background-color: white
+    background-color: white;
+    cursor: pointer;
 }
 
 
@@ -104,11 +100,15 @@
     width: 30px;
     height: 30px;
 }
+
+
+// search and menubtn
 .search{
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: white;
+  max-height: 8%;
 }
 .closeBtn{
     border: 2px solid #F2F2F2;
@@ -130,3 +130,10 @@
     background-color: #f2f2f2;
     font-size: 16px; 
 }   
+
+// productCard
+
+.prod_head{
+    font-size: 14px;
+    font-weight: 600;
+}

@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { filter, map, pipe } from 'rxjs';
-import UIkit from 'uikit';
 
 
 @Component({
@@ -15,11 +13,13 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
 
   chatstart:boolean=false
   chatstartnext:boolean=false
-  catogory:any
-  catagoryList:any
-  conversationhistory:any=[]
-  productsList:any=[]
+  catogory:string='';
+  catagoryList:any[]=[]
+  conversationhistory:any[]=[]
+  productsList:any[]=[]
   chatbotDiv:boolean=true
+  cartaddedProducts:any[]=[]
+
 
   constructor(private httpClient: HttpClient){}
 
@@ -59,8 +59,9 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
 
   onCatagoryClick(catagoryname:any){
       console.log(catagoryname)
-      this.catogory=catagoryname
-      this.getProducts(this.catogory)      
+      this.catogory=catagoryname     
+        this.getProducts(this.catogory) 
+      
       this.conversationhistory.push({
         section:"input",
         message:this.catogory
@@ -77,15 +78,15 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
       setTimeout(() => {      
         this.conversationhistory.push({
           section:'productcard',
-          result: this.productsList
+          result: this.productsList ,
+          catagory:catagoryname        
         })
         console.log( this.conversationhistory)
         this.scrollIntoView()
-      }, 1000);
+      }, 1000); 
       setTimeout(() => {
         this.scrollIntoView()
-      }, 1500);
-     
+      }, 1500);   
     }
 
 
@@ -112,4 +113,32 @@ export class ChatbotComponent implements OnInit,AfterViewInit {
         }
       }
     }
+
+
+    // Addtocart increment decrement
+    increment(prod:any) { 
+      if (prod.count>=0) {
+        prod.count++
+      }   
+
+      }
+      addtoCart(prod:any) {
+        prod.count++       
+        this.cartaddedProducts.push(prod)
+        console.log(this.cartaddedProducts)
+
+      }
+      decrement(prod:any) {
+        if (prod.count>=1) {
+          prod.count-- 
+          if (prod.count===0) {
+            this.cartaddedProducts=this.cartaddedProducts.filter((d:any)=>d.id!==prod.id)
+            console.log(this.cartaddedProducts)
+          }         
+        }
+      
+        
+  
+      }
+      
 }

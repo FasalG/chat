@@ -5,49 +5,56 @@
       "name": "ANAR",
       "image":null,
       "price":60,
-      "category": "Juices"
+      "category": "Juices",
+      "count":0
     },
     {
       "id": 2,
       "name": "MANGO",
       "image":null,
       "price":50,
-      "category": "Juices"
+      "category": "Juices",
+      "count":0
     },
     {
       "id": 3,
       "name": "APPLE",
       "image":null,
       "price":40,
-      "category": "Juices"
+      "category": "Juices",
+      "count":0
     },
     {
       "id": 4,
       "name": "PINE APPLE",
       "image":null,
       "price":70,
-      "category": "Juices"
+      "category": "Juices",
+      "count":0
     },
     {
-      "id": 1,
+      "id": 5,
       "name": "ANAR",
       "image":null,
       "price":60,
-      "category": "rolls"
+      "category": "rolls",
+      "count":0
     },
     {
-      "id": 2,
+      "id": 6,
       "name": "MANGO",
       "image":null,
       "price":50,
-      "category": "rolls"
+      "category": "rolls",
+      "count":0
     },
     {
-      "id": 3,
+      "id": 7,
       "name": "APPLE",
       "image":null,
       "price":40,
-      "category": "rolls"
+      "category": "rolls",
+      "count":0
     }
   ],
 
